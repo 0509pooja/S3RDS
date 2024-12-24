@@ -1,13 +1,12 @@
 provider "aws" {
-  region = "us-east-1"
-
+  region = "eu-north-1"
 }
 
 
 
 # EC2 Instance for Application
 resource "aws_instance" "app_instance" {
-  ami           = "ami-0e2c8caa4b6378d8c" # Replace with a valid AMI ID
+  ami           = "ami-0e2c8caa4b6378d8c" 
   instance_type = "t2.micro"
   tags = {
     Name = "projecttt"
