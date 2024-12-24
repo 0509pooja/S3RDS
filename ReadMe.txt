@@ -2,7 +2,7 @@
 
 This repository implements that reads data from an S3 bucket, processes it, and then pushes the data to an RDS database. The entire process is containerized using Docker, and an AWS Lambda function is utilized to run the task. 
 
-The infrastructure and resources required for this project are created using Terraform. The goal is to demonstrate the use of Docker, AWS services (S3, RDS, Glue, Lambda), and Terraform for efficient automation.
+The infrastructure and resources required for this project are created using Terraform. The goal is to demonstrate the use of Docker, AWS services (S3, RDS, Lambda), and Terraform for efficient automation.
 
 ---
 
@@ -22,13 +22,12 @@ The Dockerfile uses Python to process the data, and the image is pushed to AWS E
 The created Docker image is deployed to AWS ECR for future use in an AWS Lambda function. The process is manual but well documented for reproducibility.
 
 ### **4. Lambda Function Creation**
-An AWS Lambda function is created to execute the ETL process. This function utilizes the Docker image deployed to AWS ECR and is triggered by events from an S3 bucket.
+An AWS Lambda function is created to execute the ETL process. This function utilizes the Docker image deployed to AWS ECR.
 
 ### **5. Terraform Configuration**
 Terraform is used to provision the necessary AWS resources, including:
 - **S3 bucket**: Used for storing input data.
 - **RDS instance**: For storing processed data.
-- **Lambda function**: To run the ETL task.
 - **IAM roles**: To grant the necessary permissions to interact with AWS resources.
 
 ### **6. Documentation**
@@ -102,7 +101,7 @@ This will create the necessary AWS resources including the S3 bucket, RDS instan
 
 ### **5. Deploy Lambda Function**
 
-The Lambda function is automatically deployed using Terraform. It uses the Docker image stored in ECR to perform the ETL task when triggered by events from the S3 bucket.
+. It uses the Docker image stored in ECR to perform the ETL task when triggered by events from the S3 bucket.
 
 ---
 
