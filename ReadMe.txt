@@ -1,10 +1,4 @@
-Here’s a sample README file you can use for your GitHub repository. It outlines the task you've completed, provides an overview of the structure, and mentions all the details required.
-
----
-
-# AWS Lambda & Docker CI/CD Pipeline for S3 to RDS/Glue ETL
-
-## Overview
+ ## *Overview*
 
 This repository contains the implementation of a CI/CD pipeline using Jenkins, Docker, Terraform, and AWS services to automate an ETL (Extract, Transform, Load) process. The system reads data from an S3 bucket, pushes it to an RDS database, and if that fails, pushes the data to an AWS Glue database. The process is containerized using Docker, and AWS Lambda is utilized for running the tasks.
 
